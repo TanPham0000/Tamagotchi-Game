@@ -1,0 +1,10 @@
+* {
+    background-color: lavender;
+    text-align: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 75px;
+}
