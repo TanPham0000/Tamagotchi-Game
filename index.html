@@ -4,22 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eindopdracht</title>
+    <link rel="stylesheet" href="/Where-is-waldo/css/styles.css">  
     <script src="/Where-is-waldo/javascript/scripts.js" defer></script>
-    <link rel="css" href="/Where-is-waldo/css/styles.css">  
     
 </head>
     <body>
-        <h1>Hoi, Waldo</h1>
+        <main>
+            <section class="startSpel">
+                <div class="menu">
+                    <h1>Tamagotchi</h1>
+                    <h2>Welkom bij Where-is-Waldo</h2>
+                    <div class="menu-buttons">
+                        <a href="#" id="action-menu-start-game">Start</a>
+                    </div>
+                </div>
+            </section>
+            
+            <h1>Hoi, </h1>
+            
+            <label for="nameInput">geef je capybara een naam</label>
+            <input type="text" name="nameInput" id="nameInput">
+            <button id="geefNaam">Geef het een naam!</button>
 
-        <label for="nameInput">geef je capybara een naam</label>
-        <input type="text" name="nameInput" id="nameInput">
-        <button id="button">Geef het een naam!</button>
+            <h2>mm</h2>
+            <img id= "tamagotchi"src="images/waldo.png">
+            
+            <a href="#" id="startSearch">Play</a>
+            <a href="#" id="aGeefEten">Geef eten</a>
+            <a href="#" id="aSlaap">Slaap</a>
 
-        <h2>mm</h2>
-        <img >
-        <button id="btnStart">start</button>
-        <button id="btnStop">stop</button>
-        <p id="showHint">showHint</p>
-        
+
+            <p id="showHint">showHint</p>
+        </main>
     </body>
 </html>

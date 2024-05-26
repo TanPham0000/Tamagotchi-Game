@@ -7,27 +7,6 @@ const
 let secondsPassed=0;
 let timer = setInterval(countSeconds, 1000);
 
-let imgArray = new Array();
-
-imgArray[0] = new Image();
-imgArray[0].src = '/images/char1.png';
-
-imgArray[1] = new Image();
-imgArray[1].src = 'images/img/Splash_image2.jpg';
-
-imgArray[2] = new Image();
-imgArray[2].src = 'images/img/Splash_image3.jpg';
-
-imgArray[3] = new Image();
-imgArray[3].src = 'images/img/Splash_image4.jpg';
-
-imgArray[4] = new Image();
-imgArray[4].src = 'images/img/Splash_image5.jpg';
-
-imgArray[5] = new Image();
-imgArray[5].src = 'images/img/Splash_image6.jpg';
-
-loadsprei
 
 /*
 Voorbeeld code van Lissete
@@ -42,6 +21,28 @@ function startTimer {
         }   
         , 1000);
 }
+
+
+let imgArray = new Array();
+
+imgArray[0] = new Image();
+imgArray[0].src = 'char0.jpg';
+
+imgArray[1] = new Image();
+imgArray[1].src = 'char1.jpg';
+
+imgArray[2] = new Image();
+imgArray[2].src = 'char2.jpg';
+
+imgArray[3] = new Image();
+imgArray[3].src = 'images/img/Splash_image4.jpg';
+
+imgArray[4] = new Image();
+imgArray[4].src = 'images/img/Splash_image5.jpg';
+
+imgArray[5] = new Image();
+imgArray[5].src = 'images/img/Splash_image6.jpg';
+
 */
 
 /* Alle functions hier */
@@ -65,17 +66,13 @@ function startCounter() {
     console.log("Timer gestopt");
 };
 
-function groet (naam1, naam2) {
-    console.log ("Hallo," + naam1);
-    console.log ("Welkom terug, " + naam2);
-};
-
 function logInput () {
-    usernName = nameInput.value;
-    h2.textcontent = "Hoi, " + usernName;
+    userName = nameInput.value;
+    h2.textcontent = "Hoi, " + userName;
+    
 };
 
-groet ("capybara", "any");
+btn
 
 //timer hint//
 

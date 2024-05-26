@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Philosopher&display=swap');
+:root {
+    background-color: tomato;
+}
 * {
-    background-color: lavender;
-    text-align: center;
+    font-family: 'Barlow', sans-serif !important;
+}
+body {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    align-content: center;
+
 }
 
 h1 {
