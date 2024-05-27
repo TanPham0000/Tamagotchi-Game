@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eindopdracht</title>
-    <link rel="stylesheet" href="/Where-is-waldo/css/styles.css">  
     <script src="/Where-is-waldo/javascript/scripts.js" defer></script>
-    
+    <link rel="stylesheet" href="/Where-is-waldo/css/styles.css">    
 </head>
     <body>
         <main>
@@ -20,20 +19,19 @@
                 </div>
             </section>
             
-            <h1>Hoi, </h1>
+            <h2 id="veranderNaam">hello, </h2>>
             
             <label for="nameInput">geef je capybara een naam</label>
-            <input type="text" name="nameInput" id="nameInput">
+            <input type="text" id="nameInput" placeholder="Enter your name" oninput="logInput()">
             <button id="geefNaam">Geef het een naam!</button>
 
             <h2>mm</h2>
-            <img id= "tamagotchi"src="images/waldo.png">
-            
-            <a href="#" id="startSearch">Play</a>
-            <a href="#" id="aGeefEten">Geef eten</a>
-            <a href="#" id="aSlaap">Slaap</a>
-
-
+            <section>
+                <img href="#" id="tamagotchi" src="images/waldo.png">
+                <a href="#" id="startSearch">Play</a>
+                <a href="#" id="aGeefEten">Geef eten</a>
+                <a href="#" id="aSlaap">Slaap</a>
+            </section>
             <p id="showHint">showHint</p>
         </main>
     </body>
