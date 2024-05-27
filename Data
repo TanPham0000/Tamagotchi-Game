@@ -1,0 +1,16 @@
+
+/*
+Voorbeeld code van Lissete voor een start timer
+let timer = setInterval(countSeconds, 1000);
+function startTimer {
+    const timer = setInterval(() => {
+        if (secondes >= 0){
+            console.log(secondes);
+            secondes--;
+        } else {
+            clearInterval(timer);
+            console.log("Tijd over");   
+        }   
+        , 1000);
+}
+*/

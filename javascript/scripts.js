@@ -1,17 +1,23 @@
 console.log ("Connected");
-/* Alle const hier */
+/*-----------------------------------------------//
+Tamagotchi & Where is Waldo Game
+Tân Pham
+//-----------------------------------------------*/
 
 
-/* Alle let hier */
+
+//-------------------- const ----------------------//
+
+
+//-------------------- let ------------------------//
+
 let secondsPassed=0;
-let timer = setInterval(countSeconds, 1000);
 let namePlate = document.getElementById("veranderNaam");
 let bericht = "hello, ";
 let waldo = document.querySelector("Waldo")
 let plaatjesArray = ['char0.png','char1.png','char2.png','char3.png','char4.png','char5.png','char6.png','char6.png'];
 
-/* Alle functions hier */
-// 
+//------------------ functions --------------------//
 
 function logInput() {
     let userName = nameInput.value; //past de naam aan//
@@ -24,18 +30,18 @@ function logInput() {
 
 function stopCountingTime() {
     clearInterval(timer)
-    console.log("Timer gestopt");
+    stopTimer.textContent = "Timer gestopt";
+    console.log(stop);
+};
+
+function startCounter() {
+    (timer)
+    console.log("Timer gestart");
 };
 
 function countSeconds () {
     console.log (secondsPassed);
     secondsPassed += 1;
-};
-
-btnStart.addEventListener('click', countSeconds);
-function startCounter() {
-    (timer)
-    console.log("Timer gestopt");
 };
 
 function showHint () {
@@ -48,22 +54,14 @@ function hideHint() {
 };
 
 //buttons
-button.addEventListener ("click", logInput);
+geefNaam.addEventListener ("click", logInput);
+btnStart.addEventListener('click', countSeconds);
 
 //button om de timer te stoppen
 btnStop.addEventListener('click', stopCountingTime);
 
-/*
-Voorbeeld code van Lissete voor een start timer
-function startTimer {
-    const timer = setInterval(() => {
-        if (secondes >= 0){
-            console.log(secondes);
-            secondes--;
-        } else {
-            clearInterval(timer);
-            console.log("Tijd over");   
-        }   
-        , 1000);
+
+function randomizeImage() {
+    let plaatjesArray = math.floor(math.random())
+
 }
-*/
