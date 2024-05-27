@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Philosopher&display=swap');
 :root {
-    background-color: tomato;
+    background-image: url("/images/background.png");
+    background-position: 100vw;   
 }
 * {
     font-family: 'Barlow', sans-serif !important;
