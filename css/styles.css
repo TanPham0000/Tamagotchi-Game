@@ -11,7 +11,12 @@ body {
     flex-direction: column;
     align-items: center;
     align-content: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
 
+section {
+    display: block;
 }
 
 a {

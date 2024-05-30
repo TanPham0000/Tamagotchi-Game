@@ -16,25 +16,22 @@
 </head>
     <body>
         <main>
-            <section class="startSpel">
-                <div class="menu">
-                    <h1>Tamagotchi</h1>
-                    <h2>Welkom bij Where-is-Waldo</h2>
-                    <div class="menu-buttons">
-                        <a href="#" id="action-menu-start-game">Start</a>
-                    </div>
-                </div>
-            </section>
-            <label for="nameInput">geef je capybara een naam  </label>
-            <input type="text" id="nameInput" placeholder="Enter your name" oninput="logInput()">
-            <button id="geefNaam">Geef het een naam</button>
-           
+            <h1 id="veranderNaam">hello, </h1>
+            <button onclick="showNamePopup()">Geef je capybara een naam</button>
+
             <section>
-                <h2 id="veranderNaam">hello, </h2>>
                 <img href="#" id="tamagotchi" src="images/waldo.png">
-                <a href="#" id="startSearch">Play</a>
-                <a href="#" id="aGeefEten">Geef eten</a>
-                <a href="#" id="aSlaap">Slaap</a>   
+                <div id="life">
+                    <p>Name: <span id="tamagotchiName">, </span></p>
+                    <p>Happiness: <span id="happiness">10</span></p>
+                    <p>Hunger: <span id="hunger">0</span></p>
+                    <p>Energy: <span id="energy">10</span></p>
+                </div>
+                <div id="interactions">
+                    <a href="#" id="startSearch">Play</a>
+                    <a href="#" id="aGeefEten">Geef eten</a>
+                    <a href="#" id="aSlaap">Slaap</a>   
+                </div>
             </section>
             <section id="waldoGame">
                 <p id="stopTimer"></p>

@@ -5,26 +5,52 @@ Tân Pham
 //-----------------------------------------------*/
 
 
-
 //-------------------- const ----------------------//
-
+const naamElement = document.getElementById('naam');
+const happinessElement = document.getElementById('happiness');
+const hungerElement = document.getElementById('hunger');
+const energyElement = document.getElementById('energy');
 
 //-------------------- let ------------------------//
-
-let secondsPassed=0;
-let namePlate = document.getElementById("veranderNaam");
-let bericht = "hello, ";
+let veranderNaam = document.getElementById("veranderNaam");
 let waldo = document.querySelector("Waldo")
-let plaatjesArray = ['char0.png','char1.png','char2.png','char3.png','char4.png','char5.png','char6.png','char6.png'];
+let greetings = "hello, ";
+let imagesArray = ['char0.png','char1.png','char2.png','char3.png','char4.png','char5.png','char6.png','char6.png'];
+let secondsPassed=0;
 
 //------------------ functions --------------------//
 
-function logInput() {
-    let userName = nameInput.value; //past de naam aan//
-    namePlate.textContent = bericht + userName;
+function showNamePopup() {
+    let userName = prompt("Geef je capybara een naam:");
+    if (userName) {
+        let namePlate = document.getElementById("veranderNaam");
+        namePlate.textContent = greetings + userName;
+    }
+}
+
+function feed() {
+    tamagotchi.hunger = Math.max(0, tamagotchi.hunger - 2);
+    tamagotchi.happiness = Math.min(10, tamagotchi.happiness + 1);
+    updateDisplay();
+}
+
+function hideHint() {
+    hintP.textcontent = "lll"
+};
+
+//-----------Button interaction-------------//
+
+
+//button om de timer te stoppen
+btnStop.addEventListener('click', stopCountingTime);
+
+function randomizeImage() {
+    let imagesArray = math.floor(math.random())
+
 }
 
 
+/*
 //timer hint//
 //Stop timer wanneer Waldo gevonden is
 
@@ -48,20 +74,4 @@ function showHint () {
     hintP.textcontent = "wow"
     setTimeout(hideHint, 3000)
 }
-
-function hideHint() {
-    hintP.textcontent = "lll"
-};
-
-//buttons
-geefNaam.addEventListener ("click", logInput);
-btnStart.addEventListener('click', countSeconds);
-
-//button om de timer te stoppen
-btnStop.addEventListener('click', stopCountingTime);
-
-
-function randomizeImage() {
-    let plaatjesArray = math.floor(math.random())
-
-}
+*/ 
