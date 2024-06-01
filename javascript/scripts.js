@@ -12,6 +12,7 @@ const greetings = "hello, ";
 //-------------------- let ------------------------//
 let veranderNaam = document.getElementById("veranderNaam");
 let imagesArray = ['char0.png','char1.png','char2.png','char3.png','char4.png','char5.png','char6.png','char6.png'];
+let characterState = []
 let secondsPassed=0;
 
 // Tamagotchi stats, hier wordt 
@@ -57,9 +58,12 @@ function rest() {
 }
 
 function feed() {
+    if (tamagotchi.energy > 0) {
     tamagotchi.hunger = Math.max(0, tamagotchi.hunger - 2);
     tamagotchi.happiness = Math.min(10, tamagotchi.happiness + 1);
-    updateDisplay();
+    } else {
+        alert("Tamagotchi is too tired to eat!");
+    } updateDisplay();
 }
 
 //Defeat state
