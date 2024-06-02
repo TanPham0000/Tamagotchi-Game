@@ -1,19 +1,21 @@
 /*-----------------------------------------------//
-Tamagotchi & Where is Waldo Game
+Tamagotchi game
 Tân Pham
 //-----------------------------------------------*/
 //-------------------- const ----------------------//
+const greetings = "hello, ";
 const naamElement = document.getElementById('naam');
 const happinessElement = document.getElementById('happiness');
 const hungerElement = document.getElementById('hunger');
 const energyElement = document.getElementById('energy');
-const greetings = "hello, ";
 
 //-------------------- let ------------------------//
 let secondsPassed=0;
 let characterState = document.querySelector("#state");
 let myAudio = document.querySelector('#myAudio');
-
+let imageState = ["default.png", "eating.png", "playing.png", "sleeping.png"];
+let states = imageState[0];
+myAudio.volume = 0.2;
 // Tamagotchi stats, in de let wordt opgeslagen welke stats er zijn, je kan ze roepen doormiddlen van tamagotchi. te typen
 let tamagotchi = {
     happiness: 10,
@@ -33,21 +35,19 @@ function showNamePopup() {
     }
 };
 
-// tamagotchi play functions
+//---------------tamagotchi interaction functions---------------//
 function updateDisplay() {
     happinessElement.textContent = tamagotchi.happiness;
     hungerElement.textContent = tamagotchi.hunger;
     energyElement.textContent = tamagotchi.energy;
 };
 
-
-//
 function play() {
     if (tamagotchi.energy > 0) {
         tamagotchi.happiness = Math.min(10, tamagotchi.happiness + 2);
         tamagotchi.hunger = Math.min(10, tamagotchi.hunger + 1);
         tamagotchi.energy = Math.max(0, tamagotchi.energy - 2);
-        imageState
+        document.getElementById('tamagotchi').src = "/images/characterState/playing.png";
     } else {
         alert("Tamagotchi is too tired to play!");
     } updateDisplay();
@@ -70,7 +70,8 @@ function feed() {
     } updateDisplay();
 };
 
-//Defeat state
+//---------------Atrission
+//---------------De 10 en 0 geven het limiet aan en die ronden we af
 function decreaseStats() {
     tamagotchi.hunger = Math.min(10, tamagotchi.hunger + 1);
     tamagotchi.happiness = Math.max(0, tamagotchi.happiness - 1);
@@ -81,8 +82,6 @@ function decreaseStats() {
     }
     updateDisplay();
 };
-
-myAudio.volume = 0.5;
 
 function playPause() {
     let audio = document.getElementById("myAudio");
@@ -98,6 +97,20 @@ function playPause() {
 
 tamagotchi.interval = setInterval(decreaseStats, 3000);
 updateDisplay();
+
+//Einde Tamagotchi interactions
+
+
+function showHint () {
+    hintP.textcontent = "Don't forget to give it food"
+    setTimeout(hideHint, 3000)
+}
+
+function hideHint() {
+    hintP.textcontent = "Let the capybara rest"
+    setTimeout(showHint, 3000)
+}
+
 
 //-----------Button interaction-------------//
 buttonPlay.addEventListener("click", play);

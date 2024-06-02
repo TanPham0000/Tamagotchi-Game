@@ -2,13 +2,13 @@
 
 HTML Favicon generator: https://realfavicongenerator.net/favicon_result?file_id=p1husu1nsdhel17qc1beg16er4ch6
 
-Capybara's
-
+Tekeningen van capybara's gemaakt door Evan van Eveoart
 https://eveoart.com/
+https://www.instagram.com/eveoart/ 
 
 Music: https://www.bensound.com
 License code: CR8EPGU46ALZANKB
-Trackname: Cute   by Benjamin Tissot
+Trackname: Cute by Benjamin Tissot
 
 Deze methode gevonden om muziek toetevoegen
 Ik heb hier de code van:
