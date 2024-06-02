@@ -1,7 +1,7 @@
-/*-----------------------------------------------//
+/*-------------------------------------------------//
 Tamagotchi game
 Tân Pham
-//-----------------------------------------------*/
+//-------------------------------------------------*/
 //-------------------- const ----------------------//
 const greetings = "hello, ";
 const naamElement = document.getElementById('naam');
@@ -16,6 +16,7 @@ let myAudio = document.querySelector('#myAudio');
 let imageState = ["default.png", "eating.png", "playing.png", "sleeping.png"];
 let states = imageState[0];
 myAudio.volume = 0.2;
+
 // Tamagotchi stats, in de let wordt opgeslagen welke stats er zijn, je kan ze roepen doormiddlen van tamagotchi. te typen
 let tamagotchi = {
     happiness: 10,
@@ -24,7 +25,7 @@ let tamagotchi = {
     interval: null
 };
 
-//------------------ functions --------------------//
+//------------------ functions ---------------------------------//
 //Verander naam popup Let zit in de scope van de functie
 function showNamePopup() {
     let userName = prompt("Geef je capybara een naam:");
@@ -70,7 +71,7 @@ function feed() {
     } updateDisplay();
 };
 
-//---------------Atrission
+//---------------Het verminderen van de stats----------------------//
 //---------------De 10 en 0 geven het limiet aan en die ronden we af
 function decreaseStats() {
     tamagotchi.hunger = Math.min(10, tamagotchi.hunger + 1);

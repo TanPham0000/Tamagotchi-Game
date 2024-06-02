@@ -10,54 +10,7 @@ Music: https://www.bensound.com
 License code: CR8EPGU46ALZANKB
 Trackname: Cute by Benjamin Tissot
 
-Deze methode gevonden om muziek toetevoegen
+Via Medium Noah Eakin heb ik gevonden hoe ik audio kan toevoegen aan mijn spel
 Ik heb hier de code van:
 https://noaheakin.medium.com/adding-sound-to-your-js-web-app-f6a0ca728984
 
-
-
-
-
-
-Storage
-
-            <section id="waldoGame">
-                <p id="stopTimer"></p>
-            </section>
-            <p id="showHint">showHint</p>
-
-            
-//button om de timer te stoppen
-
-
-
-/*
-//timer hint//
-function showHint () {
-    hintP.textcontent = "wow"
-    setTimeout(hideHint, 3000)
-}
-
-function hideHint() {
-    hintP.textcontent = "lll"
-}
-//Stop timer wanneer Waldo gevonden is
-
-function stopCountingTime() {
-    clearInterval(timer)
-    stopTimer.textContent = "Timer gestopt";
-    console.log(stop);
-};
-
-function startCounter() {
-    (timer)
-    console.log("Timer gestart");
-};
-
-function countSeconds () {
-    console.log (secondsPassed);
-    secondsPassed += 1;
-};
-btnStop.addEventListener("click", stopCountingTime);
-
-*/ 
