@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Philosopher&display=swap');
 :root {
-    background-image: url("images/background.png");
+    background-image: url(/images/background.png);
     background-position: 100vw;   
 }
 

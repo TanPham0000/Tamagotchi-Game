@@ -14,3 +14,8 @@ Via Medium Noah Eakin heb ik gevonden hoe ik audio kan toevoegen aan mijn spel
 Ik heb hier de code van:
 https://noaheakin.medium.com/adding-sound-to-your-js-web-app-f6a0ca728984
 
+Showname popup samen met Esmae gedaan
+
+Deze lijn aan code is door Lena (vriendin) getypt toen ik er niet uitkwam
+(tamagotchi.hunger === 10 || tamagotchi.happiness === 0 || tamagotchi.energy === 0)
+Als hunger gelijk aan 10 is en de rest 0 dan is het game over

@@ -10,14 +10,15 @@ const hungerElement = document.getElementById('hunger');
 const energyElement = document.getElementById('energy');
 
 //-------------------- let ------------------------//
-let secondsPassed=0;
 let characterState = document.querySelector("#state");
 let myAudio = document.querySelector('#myAudio');
 let imageState = ["default.png", "eating.png", "playing.png", "sleeping.png"];
 let states = imageState[0];
 myAudio.volume = 0.2;
 
-// Tamagotchi stats, in de let wordt opgeslagen welke stats er zijn, je kan ze roepen doormiddlen van tamagotchi. te typen
+// Tamagotchi stats, in de let wordt opgeslagen welke stats er zijn, je kan ze roepen doormiddlen van tamagotchi. te typen//
+//-------Het limiet van elke stat is hier gelijk aangegeven-----//
+//-------De null is een placeholder voor de setInterval
 let tamagotchi = {
     happiness: 10,
     hunger: 0,
@@ -31,7 +32,6 @@ function showNamePopup() {
     let userName = prompt("Geef je capybara een naam:");
     if (userName) {
         let namePlate = document.getElementById("veranderNaam");
-        veranderNaam = document.getElementById("veranderNaam");
         namePlate.textContent = greetings + userName;
     }
 };
@@ -72,7 +72,7 @@ function feed() {
 };
 
 //---------------Het verminderen van de stats----------------------//
-//---------------De 10 en 0 geven het limiet aan en die ronden we af
+//---------------De gameover state zorgt dat de timer stops-----------------------//
 function decreaseStats() {
     tamagotchi.hunger = Math.min(10, tamagotchi.hunger + 1);
     tamagotchi.happiness = Math.max(0, tamagotchi.happiness - 1);
@@ -80,38 +80,24 @@ function decreaseStats() {
     if (tamagotchi.hunger === 10 || tamagotchi.happiness === 0 || tamagotchi.energy === 0) {
         clearInterval(tamagotchi.interval);
         alert("Game over! Your Tamagotchi is not in a good state.");
-    }
-    updateDisplay();
+    } updateDisplay();
 };
 
 function playPause() {
     let audio = document.getElementById("myAudio");
-    let button = document.getElementById("musicButton");
     if (audio.paused) {
       audio.play();
-      musicButton.textContent = "Pause music";
+      musicButton.textcontent = "Pause music";
     } else {
       audio.pause();
-      musicButton.textContent = "Play music";
+      musicButton.textcontent = "Play music";
     }
-  }  
+};
 
 tamagotchi.interval = setInterval(decreaseStats, 3000);
 updateDisplay();
 
-//Einde Tamagotchi interactions
-
-
-function showHint () {
-    hintP.textcontent = "Don't forget to give it food"
-    setTimeout(hideHint, 3000)
-}
-
-function hideHint() {
-    hintP.textcontent = "Let the capybara rest"
-    setTimeout(showHint, 3000)
-}
-
+//Einde Tamagotchi interactions//
 
 //-----------Button interaction-------------//
 buttonPlay.addEventListener("click", play);
