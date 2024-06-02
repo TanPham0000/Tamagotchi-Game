@@ -47,7 +47,7 @@ function play() {
         tamagotchi.happiness = Math.min(10, tamagotchi.happiness + 2);
         tamagotchi.hunger = Math.min(10, tamagotchi.hunger + 1);
         tamagotchi.energy = Math.max(0, tamagotchi.energy - 2);
-        document.getElementById('tamagotchi').src = "/images/characterState/playing.png";
+        document.getElementById('tamagotchi').src = "./images/characterState/playing.png";
     } else {
         alert("Tamagotchi is too tired to play!");
     } updateDisplay();
@@ -56,7 +56,7 @@ function play() {
 function rest() {
     tamagotchi.energy = Math.min(10, tamagotchi.energy + 3);
     tamagotchi.happiness = Math.max(0, tamagotchi.happiness - 1);
-    document.getElementById('tamagotchi').src = "/images/characterState/sleeping.png";
+    document.getElementById('tamagotchi').src = "./images/characterState/sleeping.png";
     updateDisplay();
 };
 
@@ -64,7 +64,7 @@ function feed() {
     if (tamagotchi.energy > 0) {
     tamagotchi.hunger = Math.max(0, tamagotchi.hunger - 2);
     tamagotchi.happiness = Math.min(10, tamagotchi.happiness + 1);
-    document.getElementById('tamagotchi').src = "/images/characterState/eating.png";
+    document.getElementById('tamagotchi').src = "./images/characterState/eating.png";
     } else {
         alert("Tamagotchi is too tired to eat!");
     } updateDisplay();
